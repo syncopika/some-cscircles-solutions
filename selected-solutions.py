@@ -1,4 +1,5 @@
 #disclaimer: some of my explanations will probably suck. sorry. I'll try to always come back and proofread to improve explanations. constructive criticism will be appreciated too! :D  
+#this is mainly to help myself practice explaining things I guess, and logging my Python practice experience.
 #just to keep track of progress: I started these explanations maybe ~2 months ago, attempted serious Python study maybe ~3 months ago?
 #please note this is Python 3
 
@@ -11,7 +12,8 @@
 
 the instructions:
 Using index and other list methods, write a function replace(list, X, Y) which replaces all occurrences of X in list with Y.   
-For example, if L = [3, 1, 4, 1, 5, 9] then replace(L, 1, 7) would change L to [3, 7, 4, 7, 5, 9]. To make this exercise a challenge, you are not allowed to use []. 
+For example, if L = [3, 1, 4, 1, 5, 9] then replace(L, 1, 7) would change L to [3, 7, 4, 7, 5, 9]. 
+To make this exercise a challenge, you are not allowed to use []. 
 Note: you don't need to use return. 
 
 '''
@@ -24,7 +26,7 @@ def replace(list, X, Y):
 
 '''
 let's translate this!
--the function replace() needs three variables to work: the list, any value for X and Y (so long as they're in the list)
+-the function replace() needs three parameters to work: the list, any value for X and Y (so long as they're in the list)
 -ok, now we translate:
 - while X still continues to exist in the list,
 - we'll define variable 'a' as the location where X is located (thus, list.index(X))
@@ -82,10 +84,12 @@ translation:
 -so first we assign our list a variable. I used 'a' here. a=[]
 -next, we want to have this loop keep on going, and there are no number ranges here, no counters, no < or >. so just use "while True".
 -now we can assign a variable to input(), the stuff we're going to keep collecting in 'a', our currently empty list. i used 'b' for input().
--then we make sure we keep adding b to a, so I use the "append" method. just put "b.append(a)". there's no need to say b=b.append(a), because then you'll get an error. (explanation needed)
+-then we make sure we keep adding b to a, so I use the "append" method. just put "b.append(a)". 
 -now we put a condition so we can stop the loop. this one is a straightforward if-statement, simply saying "if one of the inputs ends with "END", stop the loop!"
 -finally we 'return a'. 'a' now holds all the inputs up until the one ending with 'END'.
-      
+
+'''
+
 #Sub-task 2: go to it!
 
 #for this task, we want to ensure that the program follows the instructions of a BASIC program. in this subtask, a sample input would be "findLine(['10 GOTO 20','20 END'], '10')". 
