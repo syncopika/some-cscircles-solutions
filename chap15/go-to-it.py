@@ -21,6 +21,7 @@ translation:
 -assign a variable to hold each split element from prog (i.e. 1 split element would be ['10','GOTO','20']. another would be ['20,'END']. i used 'x' as my variable.
 -now we have to set a condition. if the first element in our new list, 'x', matches our target, then...
 -this gets a bit confusing (at least for me), so I'll try visualizing it:
+
                       prog => ['10 GOTO 20', '20 END']    this is one list
                       index:       0             1
                                   /                 \
@@ -28,6 +29,7 @@ translation:
                       x=> ['10','GOTO','20'], ['20','END']   this is now two lists
                    index:   0     1      2       0    1
                       answer =>  ah! our target, '10', is the 0th element in that first list of x, which is in the 0th element of prog! 
+
 - now using our code, 'return prog.index(i)', we're saying, "after you find our target, tell me where the target is relative to the index in prog. in this case, 10 is in the 0th element of prog."
 - notice how we picked the 0th element for x. This is because we want to ensure that the program can move line to line, and so it's the first number that matters.
 '''
