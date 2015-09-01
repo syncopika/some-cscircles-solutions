@@ -3,7 +3,7 @@ Write a function getBASIC() which takes no arguments, and does the following: it
 when it reaches the end it should return the whole program in the form of a list of strings. 
 '''
 
-defgetBASIC():
+def getBASIC():
    b=[]
    while True:
       a=input()
