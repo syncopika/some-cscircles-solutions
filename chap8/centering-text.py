@@ -1,3 +1,4 @@
+'''
 For this program, the first line of input is an integer width. 
 Then, there are some lines of text; the line "END" indicates the end of the text. 
 For each line of text, you need to print out a centered version of it, by adding periods .. to the left and right, so that the total length of each line of text is width. 
@@ -16,6 +17,8 @@ output:
 ......in.....
 .....the.....
 ...middle!...
+
+'''
 
 width = int(input())  
 while True:
