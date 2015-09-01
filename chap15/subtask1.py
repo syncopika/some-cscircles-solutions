@@ -29,5 +29,5 @@ translation:
 -now we can assign a variable to input(), the stuff we're going to keep collecting in 'a', our currently empty list. i used 'b' for input().
 -then we make sure we keep adding b to a, so I use the "append" method. just put "b.append(a)". 
 -now we put a condition so we can stop the loop. this one is a straightforward if-statement, simply saying "if one of the inputs ends with "END", stop the loop!"
--finally we 'return a'. 'a' now holds all the inputs up until the one ending with 'END'.
+-finally we 'return b'. 'b' now holds all the inputs up until the one ending with 'END'.
 '''
