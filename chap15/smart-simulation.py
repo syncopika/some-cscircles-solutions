@@ -6,7 +6,7 @@ Important: you should assume the procedure findLine(prog, target) defined in sub
 
 def execute(prog):
    b=prog[-1].split() #make an array out of the LAST string in prog 
-   #the last string contains a number and 'END'. we just need to make sure that this particular number shows up somewhere in the other strings or prog. otherwise, prog will loop infinitely.      
+   #the last string contains a number and 'END'. we just need to make sure that this particular number shows up somewhere in another string of prog. otherwise, prog will loop infinitely.      
    c=0  #this is our counter
    for i in range(0, len(prog)-1): #now we compare our number against every other string in the array, omitting the last string (the one that we split)
       T=prog[i]
