@@ -20,11 +20,11 @@ more old explanations. from sometime oct 2014.
 -edit 083115: for better visualization -
  a - b - c - d - e - f  : example string
  
-         ?       ?      <- are these letters?
+         ?       ?      <- are these letters? we can check this by going forwards -> a[0::2]
  
  ? <-this is supposed to be letter
  
-     ?       ?       ?  <- are these numbers?
+     ?       ?       ?  <- are these numbers? we check this by going backwards -> a[::-2]
  
 let's translate!:
 -first step: we need to remove spaces, so just replace ' ' with ''. variable 'a' becomes the revised string with no spaces.
