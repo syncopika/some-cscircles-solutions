@@ -14,10 +14,10 @@ def getBASIC():
    
 '''
 083115
-in retrospect, i'm not quite sure why i thought i needed such a long-winded explanation for a relatively straight-forward problem.
+in retrospect, i'm not quite sure why i thought i needed such a long-winded explanation for a relatively straight-forward problem lol.
 however, i believe i do recall how difficult it was to grasp these concepts and to apply them when i saw them for the first time.
-it's easy to forget these basic things too after spending a period of time away from practicing programming. but if you do them enough times,
-these algorithm problems, it should start to stick pretty well, hopefully forever!
+it's easy to forget these basic things too after spending a period of time away from practicing programming. but if you do these problems enough
+times, it should start to stick pretty well!
 
 old explanation:
 
