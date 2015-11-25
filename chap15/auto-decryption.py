@@ -34,5 +34,5 @@ def decrypt(thing):
    print(decrypted)
 #end of decrypt
 
-thing = input()
-decrypt(thing)
+thing = input() #example input = 'LQKP OG CV GKIJV DA VJG BQQ'
+decrypt(thing) #output should be 'JOIN ME AT EIGHT BY THE ZOO'
