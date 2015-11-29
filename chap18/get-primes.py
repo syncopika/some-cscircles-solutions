@@ -1,11 +1,11 @@
 def getNonPrimes(n):
-   primes = []
+   nonprimes = []
    for i in range(2,n+1):
       for j in range(2,i):
          if i%j == 0:
-            primes.append(i)
+            nonprimes.append(i)
             break
-   return primes
+   return nonprimes
 
 
 def getPrimes(n):
