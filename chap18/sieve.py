@@ -14,6 +14,20 @@ def getPrimes(n):
             
    return isPrime
    
+#this is another way to say the same thing (i*j is enough I guess? I saw the i**2 thing on Wikipedia.)
+
+def getPrimes(n):
+   isPrime = [False, False]
+   for i in range(2,n+1):
+      isPrime.append(True)
+      
+   for i in range(2,len(isPrime)):
+      for j in range(2,len(isPrime)):
+         if(i*j < len(isPrime)):
+            isPrime[i*j] = False
+            
+   return isPrime
+   
    
 #example: print(getPrimes(10))
 #output: [False, False, True, True, False, True, False, True, False, False, False]
