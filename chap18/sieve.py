@@ -22,19 +22,21 @@ def getPrimes(N):
    # remember that you can limit the upper bound to be the square root of N because any number greater than the 
    # square root of N cannot be a factor of N. this helps reduce the number of iterations needed.
    for j in range(2, int(N**(1/2) + 1)):
-      if array[j] == True:
+   
+       # if this current index, j, is a prime number, then...
+       if array[j] == True:
         
-		# find all the multiples of j and mark them as false
-         k = j*j   # let k be j squared - this is the closest multiple
-         l = 0      # this is an additional to be added to k to calculate the next multiple
-         nextMultiple = k + l*j    # this is like saying: j^2 + i*j, where i is 0,1,2,...
+	   # find all the multiples of j and mark them as false
+       k = j*j   # let k be j squared - this is the closest multiple
+       l = 0      # this is an additional addend to be added to k to calculate the next multiple
+       nextMultiple = k + l*j    # this is like saying: j^2 + i*j, where i is 0,1,2,...
 		 
-         # as long as the next multiple is less than the square root of N
-         while nextMultiple <= N:
-            array[nextMultiple] = False
-            l += 1   # increment l, the additional factor
-            nextMultiple = k + l*j   # calculate the next multiple
-    
+       # as long as the next multiple is less than N
+       while nextMultiple <= N:
+           array[nextMultiple] = False
+           l += 1   # increment l, the additional addend
+           nextMultiple = k + l*j   # calculate the next multiple
+   
    return array
             
 #print(getPrimes(100))
