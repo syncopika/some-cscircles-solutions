@@ -1,32 +1,44 @@
-#a 'regular' sieve of Eratosthenes
-#this goes from 0 to n. 0 and 1 are predefined as not prime numbers.
+# coding exercise: primed for takeoff
 
-def getPrimes(n):
-   isPrime = [False, False]
-   for i in range(2,n+1): #n+1 so that whatever n is is included in the answer
-      isPrime.append(True)
-      
-   for i in range(2,n+1):    #go through each index in isPrime (excluding the first two indices)
-      if isPrime[i] == True: #is this statement really necessary?
-         for j in range(0,n+1):
-            if((i**2 + i*j) < n+1):
-               isPrime[i**2 + i*j] = False
-            
-   return isPrime
+# this goes from 0 to n. 0 and 1 are predefined as not prime numbers.
+# based on the pseudocode shown on wikipedia for sieve of Eratosthenes
+
+def getPrimes(N):
+   limit = N
+   array = []
    
-#this is another way to say the same thing (i*j is enough I guess? I saw the i**2 thing on Wikipedia.)
-
-def getPrimes(n):
-   isPrime = [False, False]
-   for i in range(2,n+1):
-      isPrime.append(True)
+   # initialize array to all true first
+   # this is saying that all numbers will be treated as prime initially
+   # we know 0 and 1 are false though 
+   array.append(False) # 0
+   array.append(False) # 1
+   
+   # fill rest of table 
+   # adding 1 here to N because the upper bound is exclusive, not inclusive.
+   for i in range(2, N+1):
+      array.append(True)
       
-   for i in range(2,len(isPrime)):
-      for j in range(2,len(isPrime)):
-         if(i*j < len(isPrime)):
-            isPrime[i*j] = False
+   # now to actually find the composite numbers, which will be marked as false
+   # remember that you can limit the upper bound to be the square root of N because any number greater than the 
+   # square root of N cannot be a factor of N. this helps reduce the number of iterations needed.
+   for j in range(2, int(N**(1/2) + 1)):
+      if array[j] == True:
+        
+		# find all the multiples of j and mark them as false
+         k = j*j   # let k be j squared - this is the closest multiple
+         l = 0      # this is an additional to be added to k to calculate the next multiple
+         nextMultiple = k + l*j    # this is like saying: j^2 + i*j, where i is 0,1,2,...
+		 
+         # as long as the next multiple is less than the square root of N
+         while nextMultiple <= N:
+            array[nextMultiple] = False
+            l += 1   # increment l, the additional factor
+            nextMultiple = k + l*j   # calculate the next multiple
+    
+   return array
             
-   return isPrime
+#print(getPrimes(100))
+isPrime = getPrimes(1000000) # isPrime is a list with true or false, depending if the index is prime or not prime
    
    
 #example: print(getPrimes(10))

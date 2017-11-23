@@ -18,9 +18,10 @@ def postalValidate(S):
 more old explanations. from sometime oct 2014.
 
 -edit 083115: for better visualization -
+
  a - b - c - d - e - f  : example string
  
-         ?       ?      <- are these letters? we can check this by going forwards -> a[0::2]
+ ?       ?       ?      <- are these letters? we can check this by going forwards -> a[0::2] (only checks c and e though with [0::2]). use [::2]. not sure why I didn't lol.
  
  ? <-this is supposed to be letter
  
